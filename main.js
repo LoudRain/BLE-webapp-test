@@ -44,7 +44,7 @@ function requestBluetoothDevice() {
 
   return navigator.bluetooth.requestDevice({
     filters: [{
-    name: 'Francois robot'
+    name: 'ESP-BLE-MESH'
     }],
     optionalServices:[0xdd]   
   }).
