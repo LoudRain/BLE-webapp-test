@@ -43,7 +43,9 @@ function requestBluetoothDevice() {
     log('Requesting bluetooth device...');
 
   return navigator.bluetooth.requestDevice({
-    acceptAllDevices: true,
+    filters: [{
+    name: 'Francois robot'
+    }],
     optionalServices:[0xdd]   
   }).
       then(device => {
