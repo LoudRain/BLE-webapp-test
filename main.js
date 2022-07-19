@@ -46,7 +46,7 @@ function requestBluetoothDevice() {
     filters: [{
     name: 'ESP-BLE-MESH'
     }],
-    optionalServices:[0xdd]   
+    optionalServices:[0xdd, "000000dd-0000-1000-8000-00805f9b34fb"]   
   }).
       then(device => {
         log('"' + device.name + '" bluetooth device selected');
@@ -82,7 +82,7 @@ function connectDeviceAndCacheCharacteristic(device) {
           then(server => {
             log('GATT server connected, getting service...');
     
-            return server.getPrimaryService(0xdd);
+            return server.getPrimaryService("000000dd-0000-1000-8000-00805f9b34fb");
           }).
           then(service => {
             log('Service found, getting characteristic...');
