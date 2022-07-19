@@ -44,7 +44,7 @@ function requestBluetoothDevice() {
 
   return navigator.bluetooth.requestDevice({
     filters: [{
-    name: 'ESP-BLE-MESH'
+    name: 'ESP32'
     }],
     optionalServices:[0xdd, "000000dd-0000-1000-8000-00805f9b34fb"]   
   }).
